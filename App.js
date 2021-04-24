@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Text, Image, Button, TextInput, ScrollView, View,StyleSheet} from "react-native";
+import { Text, Image, Button, TextInput, ScrollView, View, StyleSheet, ImageBackground } from "react-native";
 
 class App extends Component {
   state = {
@@ -14,7 +14,8 @@ class App extends Component {
 
   render() {
     return (
-      <ScrollView style={style.margin}>
+      <ImageBackground source={require("./img/bg.jpg")} style="">
+      <ScrollView style={[style.margin]}>
         <Text style={style.lavel}>Your name : </Text><TextInput style={style.boxBorder}
                                                                 onChangeText={(nm) => this.setState({ name: nm })}></TextInput>
         <Text style={style.lavel}>Your age : </Text><TextInput style={style.boxBorder}
@@ -33,18 +34,20 @@ class App extends Component {
         <Button title={"click me"} onPress={(eveent) => alert("sampal")}></Button>
 
       </ScrollView>
+      </ImageBackground>
     )
   }
 }
 const style = StyleSheet.create({
   boxBorder:{
-    borderColor: "blue",
+    borderColor: "white",
     borderWidth: 1,
-    borderStyle: "solid"
+    borderStyle: "solid",
+    fontSize:20
   },
   textStyle:{
     fontSize:25,
-    color: "blue",
+    color: "white",
     textTransform:"uppercase"
   },
   lavel:{
@@ -57,5 +60,6 @@ const style = StyleSheet.create({
     marginLeft:5,
     marginRight:5
   }
+
 })
 export default App;
