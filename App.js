@@ -30,7 +30,7 @@ class App extends Component {
         <Text style={style.textStyle}>My Email : {this.state.email}</Text>
         <Text style={style.textStyle}>My Phone number : {this.state.phoneNumber}</Text>
 
-        <Button title={"click me"} onPress={(eveent) => alert("sampol")}></Button>
+        <Button title={"click me"} onPress={(eveent) => alert("sampal")}></Button>
 
       </ScrollView>
     )
